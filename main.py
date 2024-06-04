@@ -1,5 +1,4 @@
 import streamlit as st
-from io import BytesIO
 
 # Streamlit application for uploading and displaying a text file
 def main():
