@@ -1,8 +1,5 @@
 import streamlit as st
 
-st.title = "TXT File Renderer"
-st.set_page_config(page_icon="https://i.ibb.co/thgXZCr/0a408dc3580b4d60894d402907a5db1f-png-tplv-0es2k971ck-image.png")
-
 # Streamlit application for uploading and displaying a text file
 def main():
     """
@@ -18,7 +15,7 @@ def main():
         # Check if a file has been uploaded
         if uploaded_file is not None:
             # Read and decode the uploaded file content
-            content = uploaded_file.read().decode("utf-8", "ignore")
+            content = uploaded_file.read().decode("utf-8")
 
             # Check if the content is not empty
             if content:
@@ -27,20 +24,9 @@ def main():
             else:
                 # Display an error message if the file is empty
                 st.error("Empty file uploaded")
-        else:
-            # Display an error message if no file is uploaded
-            st.error("No file uploaded")
-
-        # Set the page configuration for the Streamlit app
-        st.set_page_config(
-            page_title="TXT File Renderer",  # Set the page title
-            page_icon="https://i.ibb.co/thgXZCr/0a408dc3580b4d60894d402907a5db1f-png-tplv-0es2k971ck-image.png",  # Set the page icon
-            layout="wide",  # Set the layout to wide
-        )
     except Exception as e:
         # Display an error message if an exception occurs
         st.error(title="Error", message=f"An error occurred: {e}")
-        raise
 
 def display_file_content(content):
     """
