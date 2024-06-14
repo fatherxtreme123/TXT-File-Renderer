@@ -1,7 +1,6 @@
 import streamlit as st
 
-st.title = "TXT File Renderer"
-st.set_page_config(page_icon="https://i.ibb.co/thgXZCr/0a408dc3580b4d60894d402907a5db1f-png-tplv-0es2k971ck-image.png")
+st.set_page_config(page_title="TXT File Renderer", page_icon="https://i.ibb.co/thgXZCr/0a408dc3580b4d60894d402907a5db1f-png-tplv-0es2k971ck-image.png", layout="wide")
 
 def main():
     """
